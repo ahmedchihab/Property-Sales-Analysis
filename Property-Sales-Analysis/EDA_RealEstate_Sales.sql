@@ -14,7 +14,6 @@ SHOW VARIABLES LIKE 'datadir';
 
 TRUNCATE TABLE properties;
 
--- ‪C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\raw_sales.csv
 
 LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/raw_sales.csv'
 INTO TABLE properties
@@ -25,7 +24,7 @@ IGNORE 1 ROWS
 (datesold, postcode, price, propertyType, @bedrooms)
 SET bedrooms = CAST(@bedrooms AS UNSIGNED);
 
--- Confirme les types de colonnes et les éventuelles valeurs NULL.
+
 DESCRIBE properties;
 
 
